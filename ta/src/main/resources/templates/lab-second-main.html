@@ -75,13 +75,27 @@
                             </td>
                         </tr>
                         <tr>
+                            <td colspan="3">
+                                <hr>
+                            </td>
+                        </tr>
+                        <tr>
                             <td align="center">
-                                <h3>res</h3>
+                                <h3>x1</h3>
                             </td>
                             <td width="15%" align="center"><h3>=</h3></td>
                             <td>
-<!--                                <div th:text="${el?.getRes()}">Error</div>-->
-                                <h3 th:text="${el.getRes()}?:'Error'"></h3>
+                                <h3 th:text="${el.getX1()}?:'Error'"></h3>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <h3>x2</h3>
+                            </td>
+                            <td width="15%" align="center"><h3>=</h3></td>
+                            <td>
+                                <h3 th:text="${el.getX2()}?:'Error'"></h3>
                             </td>
                         </tr>
                     </table>

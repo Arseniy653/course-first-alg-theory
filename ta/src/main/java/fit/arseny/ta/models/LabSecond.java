@@ -16,7 +16,8 @@ public class LabSecond {
     private Float b;
     private Float c;
     private Float d;
-    private Float res;
+    private Float x1;
+    private Float x2;
 
     public LabSecond(){}
 
@@ -30,8 +31,24 @@ public class LabSecond {
     }
 
     public void count(){
-        float tmp = a+b+c;
-        if(tmp != 0) this.res = d/tmp;
+        Float D = b*b - 4 * a * c;   // ax2+bx+c,  x1 = (- b + sqrt(D)) / 2a
+
+        if(D < 0){
+            return;
+        }
+
+        Float da = d/a;
+        Float db = d/b;
+        Float dc = d/c;
+
+        double x1 = ((-1 * b) + Math.sqrt(D))/2*a;
+        this.x1 = (float)x1;
+        if(D == 0){
+            return;
+        }
+
+        double x2 = ((-1 * b) + Math.sqrt(D))/2*a;
+        this.x2 = (float)x2;
     }
 
     public Long getId() {
@@ -74,11 +91,20 @@ public class LabSecond {
         this.d = d;
     }
 
-    public Float getRes() {
-        return res;
+
+    public Float getX1() {
+        return x1;
     }
 
-    public void setRes(Float res) {
-        this.res = res;
+    public void setX1(Float x1) {
+        this.x1 = x1;
+    }
+
+    public Float getX2() {
+        return x2;
+    }
+
+    public void setX2(Float x2) {
+        this.x2 = x2;
     }
 }
